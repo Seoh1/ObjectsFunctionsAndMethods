@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Hyang Seo.
 """
 
 ########################################################################
 #
-# TODO: 1. PUT YOUR NAME IN THE ABOVE LINE and...
+# DONE: 1. PUT YOUR NAME IN THE ABOVE LINE and...
 #
 #   Allow this file to use the rosegraphics.py file by marking the src
 #   directory as a "Sources Root".  Do that by right clicking on the src folder,
@@ -33,7 +33,9 @@ def main():
     # A TurtleWindow works "behind the scenes" to enable Turtle movement
     window = rg.TurtleWindow()
 
+    turtle5()
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
@@ -103,9 +105,52 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+    johnny = rg.SimpleTurtle()
+    johnny.pen = rg.Pen('light pink', 10)
+
+    johnny.forward(200)
+    johnny.begin_fill()
+    johnny.draw_regular_polygon(6, 20)
+    johnny.end_fill()
+
+def turtle5():
+    heart_turtle = rg.SimpleTurtle('circle')
+    line_turtle = rg.SimpleTurtle()
+
+    heart_turtle.left(90)
+    window = rg.TurtleWindow()
+    heart_turtle.pen = rg.Pen("light pink", 3)
+
+    def halfcircle():
+        # this code generates 2 * 1/4th a circle
+        for i in range(2):
+            # this code generates 1/4th a circle
+            for i in range(10):
+                heart_turtle.right(i * 2)  # keep rotating the turtle with a little bit more and more
+                heart_turtle.forward(i)  # move the turtle forward more and more
+
+    heart_turtle.pen_down()
+    heart_turtle.left(45)
+    heart_turtle.forward(80)
+    heart_turtle.right(15)
+    halfcircle()
+    heart_turtle.left(140)
+    halfcircle()
+    heart_turtle.right(26)
+    heart_turtle.forward(80)
+    heart_turtle.pen_up()
+    heart_turtle.right(140)
+    heart_turtle.forward(53)
+
+    line_turtle.left(90)
+    line_turtle.forward(100)
+
+
+
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -137,7 +182,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -167,7 +212,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -183,7 +228,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
