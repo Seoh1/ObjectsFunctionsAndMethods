@@ -43,7 +43,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 #          -- Write the names of three METHODs that Circle objects have:
 #               (Hint: Use the circle from the example3 function below with the dot trick to let PyCharm help you. )
-#                .attach_to(), .clone() and .detach_to()
+#                .attach_to() .clone() and .detach_to()
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle objects have:
 #                outline_thickness, .outline_color and .radius.
